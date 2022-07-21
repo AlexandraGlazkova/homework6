@@ -1,3 +1,4 @@
+import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Random;
@@ -55,6 +56,24 @@ public class Main {
         double averageValue = sum/arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + Math.round(averageValue*100.00)/100.00 + " рублей");
 
-
+//### Задание 4
+//        Отойдем от подсчетов.
+//        В нашей бухгалтерской книге появился баг. Что-то пошло нет так, и Ф. И. О. сотрудников начали
+//        отображаться в обратную сторону. Т. е. вместо «Иванов Иван Иванович» мы имеем «чивонавИ навИ вонавИ».
+//        Данные с именами сотрудников хранятся в виде массива символов (char[]).
+//        Напишите код, который в случае такого бага будет выводить Ф. И. О. сотрудников в корректном виде.
+//        В качестве данных для массива используйте:
+//        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+//        В результате в консоль должно быть выведено "Ivanov Ivan".
+//        **Важно**: не используйте дополнительные массивы для решения этой задачи. Необходимо корректно
+//        пройти по массиву циклом и распечатать его элементы в правильном порядке.
+        System.out.println("Задание 4");
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        int name = reverseFullName.length-1;
+        while (name>0) {
+            System.out.print(reverseFullName[name]);
+            name--;
+        }
+            System.out.print(reverseFullName[0]);
     }
 }
